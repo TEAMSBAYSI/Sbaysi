@@ -31,7 +31,7 @@ if not redis:get(Server_Sbaysi.."User_DevSbaysi1") then
 io.write('\n\27[1;35m⌔︙Send UserName For Sudo : ارسل معرف المطور الاساسي ...\n\27[0;39;49m')
 local User_Sudo = io.read():gsub('@','')
 if User_Sudo ~= '' then
-local GetInfoUser = http.request("https://ifff.ga/index.php?id="..User_Sudo)
+local GetInfoUser = http.request("https://api.gmsm.xyz/GetUser?UserName="..User_Sudo)
 local User_Info = JSON.decode(GetInfoUser)
 if User_Info.Info.Chek == "Not_Info" then
 io.write('\n\27[1;31m The UserName was not Saved : المعرف غلط ارسل المعرف صحيح\n\27[0;39;49m')
